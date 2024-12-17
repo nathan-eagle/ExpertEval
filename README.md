@@ -11,13 +11,10 @@ An AI-powered voice assistant that helps users improve their LinkedIn profiles t
 - Interruption handling for natural conversation flow
 - Configurable voice settings and system prompts
 
-
-## ToDOs:
+## ToDos
 
 - Transcribe the audio from the caller in the logs (currently only the assistant's audio is transcribed due to OpenAI Realtime API bug: input_audio_transcription)
-- Parse Linkedin profile
-
-
+- Realtime LinkedIn profile lookup and parsing
 
 ## Prerequisites
 
@@ -92,9 +89,6 @@ ngrok http --url=your-ngrok-domain 5050
 4. Push to the branch
 5. Create a Pull Request
 
-## License
-
-[Add your license information here]
 
 ## Support
 
