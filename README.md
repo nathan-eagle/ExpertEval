@@ -92,12 +92,12 @@ json
 - Multi-model orchestration layer
 
 
-## ToDos
+### ToDos
 
 - Transcribe the audio from the caller in the logs (currently only the assistant's audio is transcribed due to OpenAI Realtime API bug: input_audio_transcription)
 - Realtime LinkedIn profile lookup and parsing
 
-## Prerequisites
+### Prerequisites
 
 - Python 3.8+
 - OpenAI API key
@@ -105,7 +105,7 @@ json
 - LinkedIn cookies for profile lookup
 - ngrok (for local development)
 
-## Installation
+### Installation
 
 1. Clone the repository:
 
@@ -136,7 +136,7 @@ ngrok http --url=your-ngrok-domain 5050
 
 3. Configure your Twilio webhook URL to point to your server's `/incoming-call` endpoint
 
-## Project Structure
+### Project Structure
 
 - `main.py`: Main application file with FastAPI server and WebSocket handlers
 - `services/`:
@@ -145,19 +145,19 @@ ngrok http --url=your-ngrok-domain 5050
 - `config.py`: Configuration settings and environment variables
 - `data/profiles/`: Storage for LinkedIn profile data
 
-## Features in Detail
+### Features in Detail
 
-### Voice Interaction
+#### Voice Interaction
 - Real-time voice processing using OpenAI's GPT-4
 - Natural conversation flow with interruption handling
 - Configurable voice personality and characteristics
 
-### LinkedIn Integration
+#### LinkedIn Integration
 - Automatic profile lookup based on caller's phone number
 - Personalized conversation based on existing profile data
 - Targeted improvement suggestions
 
-### Logging and Monitoring
+#### Logging and Monitoring
 - Detailed conversation logging
 - Call tracking and analytics
 - Error handling and debugging capabilities
