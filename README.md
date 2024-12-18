@@ -3,16 +3,17 @@
 The system includes an automated expertise evaluation feature that conducts structured interviews to assess caller expertise across multiple domains.
 
 #### Core Evaluation Features
+- Real-time voice conversations using OpenAI's Advanced Voice Mode
+- LinkedIn profile lookup based on caller's phone number
+- Interruption handling for natural conversation flow
+- Configurable voice settings and system prompts
 - Automated expertise domain identification from LinkedIn profiles
 - Real-time expertise assessment through structured interviews
 - Multi-model evaluation pipeline using OpenAI and Anthropic models
 - Dynamic question generation based on mid-interview analysis
 - Comprehensive expertise scoring across multiple domains
 - Detailed evaluation reports and interview transcripts
-- Real-time voice conversations using OpenAI's Advanced Voice Mode
-- LinkedIn profile lookup based on caller's phone number
-- Interruption handling for natural conversation flow
-- Configurable voice settings and system prompts
+
 
 #### Interview Process
 1. **Initial Assessment (2-3 minutes)**
@@ -170,13 +171,6 @@ ngrok http --url=your-ngrok-domain 5050
 - Call tracking and analytics
 - Error handling and debugging capabilities
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
 
 
 ## Support
