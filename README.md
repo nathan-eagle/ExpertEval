@@ -1,15 +1,96 @@
-# LinkedIn Advisor Bot
+### Expertise Evaluation System
 
-An AI-powered voice assistant that helps users improve their LinkedIn profiles through interactive phone conversations. Built with FastAPI, Twilio, and OpenAI's Realtime API with Advanced Voice Mode.
+The system includes an automated expertise evaluation feature that conducts structured interviews to assess caller expertise across multiple domains.
 
-## Features
-
+#### Core Evaluation Features
+- Automated expertise domain identification from LinkedIn profiles
+- Real-time expertise assessment through structured interviews
+- Multi-model evaluation pipeline using OpenAI and Anthropic models
+- Dynamic question generation based on mid-interview analysis
+- Comprehensive expertise scoring across multiple domains
+- Detailed evaluation reports and interview transcripts
 - Real-time voice conversations using OpenAI's Advanced Voice Mode
 - LinkedIn profile lookup based on caller's phone number
-- Personalized profile improvement suggestions
-- Conversation logging and tracking
 - Interruption handling for natural conversation flow
 - Configurable voice settings and system prompts
+
+#### Interview Process
+1. **Initial Assessment (2-3 minutes)**
+   - LinkedIn profile analysis for potential expertise domains
+   - Caller self-identification of expertise areas
+   - Domain prioritization and interview focus determination
+
+2. **Primary Interview (15 minutes)**
+   - Structured questioning about primary expertise domain
+   - Real-time response analysis and follow-up generation
+   - Mid-interview evaluation at 7-minute mark
+   - Dynamic question adjustment based on multi-model analysis
+
+3. **Multi-Model Evaluation Pipeline**
+   - Mid-interview transcript analysis by OpenAI GPT-4 and Anthropic Claude
+   - Generation of targeted follow-up questions
+   - Real-time integration of AI-generated questions
+   - Cross-model consensus for expertise scoring
+
+4. **Final Assessment**
+   - Comprehensive domain expertise scoring (0-100)
+   - Multi-domain expertise mapping
+   - Detailed evaluation report generation
+   - Interview transcript analysis and archival
+
+#### Enhanced Features
+- **Expertise Verification**: Integration with industry-standard frameworks and taxonomies
+- **Comparative Analysis**: Benchmarking against industry averages and peer groups
+- **Time-Series Tracking**: Support for multiple interviews over time to track expertise development
+- **Domain-Specific Rubrics**: Customized evaluation criteria for different professional fields
+- **Confidence Scoring**: Assessment of confidence levels in expertise claims
+- **Skills Gap Analysis**: Identification of areas for potential improvement
+- **Recommendation Engine**: Personalized suggestions for expertise development
+
+#### Data Management
+- Interview transcripts stored in `data/interviews/`
+- Evaluation reports stored in `data/evaluations/`
+- Structured JSON format for easy integration and analysis
+- Historical tracking and version control
+- Secure storage with encryption for sensitive information
+
+
+#### Report Structure
+json
+{
+"caller_id": "string",
+"interview_date": "ISO-8601 timestamp",
+"linkedin_profile": "profile_reference",
+"primary_domain": "string",
+"evaluation_scores": {
+"domain_name": {
+"score": 0-100,
+"confidence": 0-100,
+"key_strengths": ["string"],
+"areas_for_improvement": ["string"]
+}
+},
+"interview_metrics": {
+"duration": "minutes",
+"questions_asked": "number",
+"response_quality": 0-100
+},
+"recommendations": ["string"],
+"model_consensus": {
+"gpt4_score": 0-100,
+"claude_score": 0-100,
+"final_score": 0-100
+}
+}
+
+### Implementation Requirements
+- OpenAI GPT-4 with function calling capabilities
+- Anthropic Claude API integration
+- Real-time transcript processing pipeline
+- Secure data storage and encryption
+- Interview timing management system
+- Multi-model orchestration layer
+
 
 ## ToDos
 
