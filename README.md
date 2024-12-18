@@ -52,7 +52,6 @@ The system includes an automated expertise evaluation feature that conducts stru
 - Evaluation reports stored in `data/evaluations/`
 - Structured JSON format for easy integration and analysis
 - Historical tracking and version control
-- Secure storage with encryption for sensitive information
 
 
 #### Report Structure
@@ -96,6 +95,12 @@ json
 
 - Transcribe the audio from the caller in the logs (currently only the assistant's audio is transcribed due to OpenAI Realtime API bug: input_audio_transcription)
 - Realtime LinkedIn profile lookup and parsing
+- Mid-interview evaluation and question generation
+- Multi-model evaluation and scoring
+- Detailed evaluation report generation
+- For testing, add manual override capability for caller identification
+
+
 
 ### Prerequisites
 
@@ -110,8 +115,8 @@ json
 1. Clone the repository:
 
 bash
-git clone [repository-url]
-cd linkedin-advisor-bot
+git clone [https://github.com/nathan-eagle/ExpertEval]
+cd ExpertEval
 
 bash
 python -m venv venv
@@ -143,7 +148,10 @@ ngrok http --url=your-ngrok-domain 5050
   - `linkedin_service.py`: LinkedIn profile lookup functionality
   - `logging_service.py`: Conversation logging utilities
 - `config.py`: Configuration settings and environment variables
-- `data/profiles/`: Storage for LinkedIn profile data
+- `data/`:
+  - `profiles/`: Storage for LinkedIn profile data
+  - `interviews/`: Storage for interview transcripts
+  - `evaluations/`: Storage for expertise evaluation reports
 
 ### Features in Detail
 
